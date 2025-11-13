@@ -8,13 +8,13 @@ LABEL description="Docker image for building Android kernels with aosp clang/gcc
 
 # 构建时变量（可通过 --build-arg 传入）
 # 内核源码地址（默认使用谷歌安卓内核示例）
-ARG KERNEL_SOURCE=https://github.com/LineageOS/android_kernel_xiaomi_msm8998
+ARG KERNEL_SOURCE=https://github.com/Xiaomi-sdm845-KSU/Xiaomi_Kernel_OpenSource-sdm845
 # 内核分支（默认安卓通用内核 5.4 分支）
-ARG KERNEL_BRANCH=lineage-22.2
+ARG KERNEL_BRANCH=88-zstd
 # 架构（默认 arm64）
 ARG ARCH=arm64
 # 内核配置文件
-ARG KERNEL_CONFIG=chiron_defconfig
+ARG KERNEL_CONFIG=dipper_user_defconfig
 
 #KernelSU可选的值 kernelsu kernelsu-next suki-su
 ARG KERNEL_SU=kernelsu-next                                                                               
@@ -33,7 +33,7 @@ ARG USE_MAGISKBOOT=true
 
 # 工具链版本（clang 默认 r383902b，gcc 默认 4.9）
 ARG CLANG_BRANCH=android11-release 
-ARG CLANG_VERSION=r383902b
+ARG CLANG_VERSION=r428724
 ARG GCC_VERSION=
 # 环境变量（容器内可见，用于编译过程）
 ENV DEBIAN_FRONTEND=noninteractive \
