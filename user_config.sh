@@ -3,11 +3,11 @@
 UBUNTU_VERSION=22.04
 
 #内核源码
-KERNEL_SOURCE=https://github.com/LineageOS/android_kernel_xiaomi_msm8998
+KERNEL_SOURCE=https://github.com/Xiaomi-sdm845-KSU/Xiaomi_Kernel_OpenSource-sdm845
 #分支
-KERNEL_BRANCH=lineage-22.2
+KERNEL_BRANCH=88-zstd
 #内核配置文件
-KERNEL_CONFIG=chiron_defconfig
+KERNEL_CONFIG=dipper_user_defconfig
 #架构
 ARCH=arm64
 
@@ -29,7 +29,7 @@ USE_MAGISKBOOT=true
 # 编译工具链（若留空则默认clang，可选 gcc）
 TOOLCHAIN=clang
 # 工具链版本（若留空则clang默认 r383902b，gcc 默认 4.9）
-CLANG_VERSION=r450784b
+CLANG_VERSION=r428724
 GCC_VERSION=
 #目前CLANG_VERSION的可取值(只填写 r-xxxxx部分)
 #clang-r383902b
